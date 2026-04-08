@@ -1,74 +1,128 @@
-Швидкий старт
+---
+
+````md
+# DOTASCOPE 🎮
+
+**Платформа аналітики для Dota 2 та CS2** — сучасний frontend-проєкт з використанням реальних даних OpenDota API.
+
+---
+
+## 🚀 Швидкий старт
+
+```bash
 # 1. Встановити залежності
 npm install
 
 # 2. Запустити dev-сервер
 npm run dev
+````
 
-# Відкрити http://localhost:3000
-Технологічний стек
-Рівень	Технологія
-Фреймворк	React 18 + TypeScript
-Збірка	Vite 5
-Роутинг	React Router v6
-Отримання даних	TanStack Query v5 (кеш, staleTime)
-Глобальний стан	Zustand + persist (localStorage)
-Типізація	Повна типізація (strict TS)
-Шрифти	Teko · JetBrains Mono · Rajdhani
-API	OpenDota API (безкоштовно, без ключа)
-Структура проєкту
+👉 Відкрити в браузері: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧱 Технологічний стек
+
+| Рівень          | Технологія                       |
+| --------------- | -------------------------------- |
+| Фреймворк       | React 18 + TypeScript            |
+| Збірка          | Vite 5                           |
+| Роутинг         | React Router v6                  |
+| Отримання даних | TanStack Query v5                |
+| Глобальний стан | Zustand + persist (localStorage) |
+| Типізація       | Strict TypeScript                |
+| API             | OpenDota API                     |
+
+---
+
+## 📁 Структура проєкту
+
+```
 src/
 ├── api/
-│   └── opendota.ts       # усі методи API
+│   └── opendota.ts
 ├── components/
-│   ├── ui/               # перевикористовувані компоненти
-│   ├── layout/           # Navbar
-│   ├── player/           # SearchBar, PlayerHeader, MatchesTable, Charts
-│   ├── heroes/           # HeroesPage
-│   ├── leaderboard/      # LeaderboardPage
-│   └── meta/             # MetaPage
+│   ├── ui/
+│   ├── layout/
+│   ├── player/
+│   ├── heroes/
+│   ├── leaderboard/
+│   └── meta/
 ├── hooks/
-│   └── useData.ts        # React Query хуки
+│   └── useData.ts
 ├── pages/
 │   ├── HomePage.tsx
 │   └── PlayerPage.tsx
 ├── store/
-│   └── appStore.ts       # Zustand
+│   └── appStore.ts
 ├── types/
-│   └── index.ts          # усі TypeScript типи
+│   └── index.ts
 └── utils/
-    ├── constants.ts      # герої, ранги, атрибути
-    └── helpers.ts        # утиліти
-Сторінки
-URL	Опис
-/	Пошук за Steam ID, історія
-/player/:id	Профіль: огляд, матчі, герої, KDA-граф
-/heroes	База героїв з фільтрами та сортуванням
-/leaderboard	Топ-100 гравців рангу Immortal
-/meta	Метагейм: піки/бани/винрейт за атрибутами
-Подальший розвиток
-🔧 Бекенд (Node.js + Express + PostgreSQL)
+    ├── constants.ts
+    └── helpers.ts
+```
+
+---
+
+## 📄 Сторінки
+
+* `/` — пошук за Steam ID, історія запитів
+* `/player/:id` — профіль гравця (огляд, матчі, герої, KDA-граф)
+* `/heroes` — база героїв з фільтрами та сортуванням
+* `/leaderboard` — топ-100 гравців рангу Immortal
+* `/meta` — метагейм (популярність, винрейт, бани)
+
+---
+
+## 🔜 Подальший розвиток
+
+### 🔧 Бекенд (Node.js + Express + PostgreSQL)
+
+```
 server/
 ├── src/
-│   ├── routes/      # REST API
-│   ├── services/    # бізнес-логіка
-│   ├── db/          # Prisma ORM
-│   └── jobs/        # фонове оновлення матчів (Bull queue)
-Інтеграція CS2
-Steam Web API для базової статистики
-FACEIT API для змагальних матчів
-Система рейтингу CS
-Заплановані функції
- Порівняння двох гравців
- Matchups героїв (проти кого сильні/слабкі)
- Перегляд професійних матчів
- Сповіщення про матчі
- Mobile-first PWA
-Ліміти API
+│   ├── routes/
+│   ├── services/
+│   ├── db/
+│   └── jobs/
+```
 
-OpenDota — 50 000 запитів/місяць безкоштовно. Для продакшену:
+---
 
-Зареєструватися на https://api.opendota.com
- → отримати API ключ
-Додати ?api_key=YOUR_KEY до запитів у src/api/opendota.ts
-Отримати 2 000 000 запитів/місяць за $10/місяць
+### 🎯 Інтеграція CS2
+
+* Steam Web API (базова статистика)
+* FACEIT API (змагальні матчі)
+* Власна система рейтингу
+
+---
+
+### 📌 Заплановані функції
+
+* [ ] Порівняння двох гравців
+* [ ] Hero matchups (контрпіки)
+* [ ] Перегляд професійних матчів
+* [ ] Сповіщення про матчі
+* [ ] Mobile-first PWA
+
+---
+
+## ⚠️ Ліміти API
+
+OpenDota API:
+
+* **50 000 запитів/місяць** — безкоштовно
+* **2 000 000 запитів/місяць** — $10/місяць
+
+### Для продакшену:
+
+1. Зареєструватися: [https://api.opendota.com](https://api.opendota.com)
+2. Отримати API ключ
+3. Додати до запитів:
+
+```
+?api_key=YOUR_KEY
+```
+
+---
+
