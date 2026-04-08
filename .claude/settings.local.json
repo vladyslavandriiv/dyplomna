@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rn [А-Яа-яЁё] /c/dotascope/src --include=*.ts --include=*.tsx --include=*.html --include=*.js --include=*.jsx)",
+      "Bash(grep -rn [中文] /c/dotascope/src --include=*.ts --include=*.tsx --include=*.html --include=*.js --include=*.jsx)",
+      "Bash(grep -rn [ぁ-んァ-ヴー] /c/dotascope/src --include=*.ts --include=*.tsx --include=*.html --include=*.js --include=*.jsx)",
+      "Bash(grep -rn [ㄱ-ㅣ] /c/dotascope/src --include=*.ts --include=*.tsx --include=*.html --include=*.js --include=*.jsx)",
+      "Bash(grep -rn [أ-ي] /c/dotascope/src --include=*.ts --include=*.tsx --include=*.html --include=*.js --include=*.jsx)"
+    ]
+  }
+}
