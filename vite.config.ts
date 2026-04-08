@@ -3,12 +3,16 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
+  base: '/dyplomna/', // 🔥 ОЦЕ ГОЛОВНЕ
+
   plugins: [react()],
+
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+
   server: {
     port: 3000,
     cors: true,
@@ -20,6 +24,7 @@ export default defineConfig({
       },
     },
   },
+
   optimizeDeps: {
     include: ['@tanstack/react-query', 'react-router-dom', 'zustand'],
   },
