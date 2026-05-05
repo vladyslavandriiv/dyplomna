@@ -27,10 +27,12 @@ const DOTA_LINKS = [
   { to: '/heroes',      label: 'Heroes'      },
   { to: '/leaderboard', label: 'Leaderboard' },
   { to: '/meta',        label: 'Meta'        },
+  { to: '/ai',          label: 'AI Coach'    },
 ]
 const CS2_LINKS = [
   { to: '/',            label: 'Home'        },
   { to: '/leaderboard', label: 'Leaderboard' },
+  { to: '/ai',          label: 'AI Coach'    },
 ]
 
 const DOTA_ACCENT = '#c84b31'

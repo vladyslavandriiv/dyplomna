@@ -22,6 +22,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/opendota/, ''),
       },
+      '/api/free-llm': {
+        target: 'https://apifreellm.com/api/v1/chat',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/free-llm/, ''),
+      },
+      '/api/nvidia': {
+        target: 'https://integrate.api.nvidia.com/v1',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/nvidia/, ''),
+      },
     },
   },
 

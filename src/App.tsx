@@ -8,6 +8,7 @@ import { SteamCallbackPage } from '@/pages/SteamCallbackPage'
 import { HeroesPage } from '@/components/heroes/HeroesPage'
 import { LeaderboardPage } from '@/components/leaderboard/LeaderboardPage'
 import { MetaPage } from '@/components/meta/MetaPage'
+import { AIPage } from '@/pages/AIPage'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -29,6 +30,7 @@ export default function App() {
               <Route path="/leaderboard"            element={<LeaderboardPage />} />
               <Route path="/meta"                   element={<MetaPage />} />
               <Route path="/account"                element={<AccountPage />} />
+              <Route path="/ai"                     element={<AIPage />} />
               <Route path="/auth/steam/callback"    element={<SteamCallbackPage />} />
               <Route path="*"                       element={<HomePage />} />
             </Routes>
